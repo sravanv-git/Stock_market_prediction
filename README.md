@@ -16,8 +16,11 @@ Scikit-learn has a highly optimized version of logistic regression implementatio
 So for normalizing the data we took the open, high, low and close and created four values from it which were-
 
  x1=(close-open)/(high-low)*10
+ 
  x2=close/open*10
+ 
  x3=high/close*10
+ 
  x4=open/low*10
  
 Then we created a simple sequential model and fitted the data after deciding which model fits best.
