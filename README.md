@@ -13,11 +13,14 @@ Long Short-Term Memory (LSTM) networks are a type of recurrent neural network ca
 We later tried Logistic Regression from sklearn and found high accuracy. 
 Logistic regression is a process of modeling the probability of a discrete outcome given an input variable. Logistic regression is a useful analysis method for classification problems, where you are trying to determine if a new sample fits best into a category.
 Scikit-learn has a highly optimized version of logistic regression implementation, which supports multiclass classification task.
+So for normalizing the data we took the open, high, low and close and created four values from it which were-
 
-## Conclusion:
+ x1=(close-open)/(high-low)*10
+ x2=close/open*10
+ x3=high/close*10
+ x4=open/low*10
+ 
+Then we created a simple sequential model and fitted the data after deciding which model fits best.
+The model is supposed to get filtered input but for the unlabeled parts given we made prediction for all of them as we didn’t know how to give y predictions only for specific input and not confuse you with which ‘y’ is where.
 
-After looking at various models and playing around with them we found the Deep Learning based LSTM and Sequential Neural Network model accuracy to be more than 52-53.
 
-On the other hand, Scikit-Learn’s Logistic Regression showed an accuracy of 54 with a more balanced distribution of both the prediction classes.  
-
-Looking at the input features and output class, we concluded that y=1 refers to the scenario when the price of the stock increases the next day whereas, y=0 means the price will drop or remain same.
